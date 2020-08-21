@@ -6,7 +6,7 @@ import Pai from './src/indireta/Pai'
 export default function App() {
   return (
     <View style={styles.container}>
-      <Pai/>
+      <Text>Olá</Text>
     </View>
   );
 }
