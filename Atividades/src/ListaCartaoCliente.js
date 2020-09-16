@@ -30,13 +30,40 @@ export default function ListaCartao (props){
             console.error(error)})
         }, []);
 
-        function renderizacao (){
+        function renderizacao () {
             if(data != null){
-                return (
-                    <>
-                        
-                    </>
-                )
+                return(
+                <View style={{justifyContent:'center', alignItems:'center'}}>
+                    <View style={{alignItems:'center'}}>
+                        <Text style={{fontSize:24, color:'blue', fontWeight:'bold'}}>Cartoes do cliente {idCliente}:</Text>
+                    </View>
+                        <FlatList
+                            data={data}
+                            keyExtractor={({id}) => id}
+                            renderItem={({ctr}) => (
+                                <View>
+                                    <View style={styles.viewTexto}>
+                                        <Text>Id cartao:</Text>
+                                        <Text>{ctr.id}</Text>
+                                    </View>
+                                    <View style={styles.viewTexto}>
+                                        <Text>Numero do cartao:</Text>
+                                        <Text>{ctr.numero}</Text>
+                                    </View>
+                                    <View>
+                                        <Text>Data de validade:</Text>
+                                        <Text>{ctr.dataValidade}</Text>
+                                    </View>
+                                    <View>
+                                        <Text>Bloqueado:</Text>
+                                        <Text>{ctr.bloqueado}</Text>
+                                    </View>
+
+                            </View>
+                            )}
+                        />              
+                    </View>
+                );
             }
         }
     

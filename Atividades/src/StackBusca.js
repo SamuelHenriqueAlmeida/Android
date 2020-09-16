@@ -2,6 +2,7 @@ import React from 'react'
 import {createStackNavigator} from '@react-navigation/stack'
 import TelaBusca from './BuscaCliente'
 import TelaLista from './ListaDadosCliente'
+import TelaCartao from './ListaCartaoCliente'
 
 const Stack = createStackNavigator()
 
@@ -15,6 +16,8 @@ export default function StackFunc (props){
                 </Stack.Screen>
             <Stack.Screen name="Lista" 
                 component={TelaLista}/>
+                <Stack.Screen name="ListarCartao" 
+                component={TelaCartao}/>
         </Stack.Navigator>
     );
 }

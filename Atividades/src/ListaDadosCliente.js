@@ -51,7 +51,7 @@ export default function Lista (props){
                     </Text>
                     <Button title="Voltar" onPress={() => props.navigation.goBack()}/>  
                     <Button title="ListarCartões" onPress={() => {
-                props.navigation.navigate("ListaCartao", {idCliente:id})}}/>
+                props.navigation.navigate("ListarCartao", {idCliente:id})}}/>
                 </>
             )
         }
